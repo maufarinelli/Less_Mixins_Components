@@ -1,0 +1,42 @@
+@import (once) "../_mixins";
+@import (once) "../_variables";
+
+.montroyal_wrapper {
+    height: 150px;
+    padding-top: 25px;
+    overflow: hidden;
+};
+
+.component(montroyal, {
+    width: @montroyal-width;
+    height: @montroyal-height;
+
+    border-radius: 50%;
+
+    .modifier(montroyal, summer, {
+        background-color: @montroyal-summer-bg;
+    });
+
+    .modifier(montroyal, winter, {
+        background-color: @montroyal-winter-bg;
+        box-shadow: 3px 3px 3px inset darken(@montroyal-winter-bg, 10%);
+    });
+
+    .child(icon, cross, {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            top: -@montroyal-height / 17;
+            left: @montroyal-width / 2;
+
+            content: '✞';
+            width: @montroyal-width / 20;
+            height: @montroyal-height / 20;
+
+            font-size: 2em;
+            color: #626262;
+
+        }
+    });
+});

@@ -1,0 +1,109 @@
+@import (once) "../_mixins";
+@import (once) "../_variables";
+
+.component(iconleft, {
+    display: inline-block;
+    padding-right: 0.3em;
+    font-style: normal;
+
+    &:before {
+        width: 0.75em;
+        height: 0.75em;
+    }
+
+    .modifier(icon, checked, {
+        &:before {
+            content: "✓";
+        }
+    });
+
+    .modifier(icon, delete, {
+        &:before {
+            content: "✗";
+        }
+    });
+
+    .modifier(icon, diamond, {
+        &:before {
+            content: "♦";
+        }
+    });
+
+    .modifier(icon, whitestar, {
+        &:before {
+            content: "☆";
+        }
+    });
+
+    .modifier(icon, rage, {
+        &:before {
+            content: "✪";
+        }
+    });
+
+    .modifier(icon, redhot, {
+        &:before {
+            content: "❂";
+        }
+    });
+
+    .modifier(icon, airplaine, {
+        &:before {
+            content: "✈";
+        }
+    });
+});
+
+.component(iconright, {
+    display: inline-block;
+    padding-left: 0.3em;
+    font-style: normal;
+
+    &:after {
+        width: 0.75em;
+        height: 0.75em;
+    }
+
+    .modifier(icon, checked, {
+        &:after {
+            content: "✓";
+        }
+    });
+
+    .modifier(icon, delete, {
+        &:after {
+            content: "✗";
+        }
+    });
+
+    .modifier(icon, diamond, {
+        &:after {
+            content: "♦";
+        }
+    });
+
+    .modifier(icon, whitestar, {
+        &:after {
+            content: "☆";
+        }
+    });
+
+    .modifier(icon, rage, {
+        &:after {
+            content: "✪";
+        }
+    });
+
+    .modifier(icon, redhot, {
+        &:after {
+            content: "❂";
+        }
+    });
+
+    .modifier(icon, airplaine, {
+        &:after {
+            content: "✈";
+        }
+    });
+});
+

@@ -1,0 +1,60 @@
+@import (once) "../_mixins";
+@import (once) "../_variables";
+
+/* Button Component
+----------------------------------------- */
+.component(button, {
+    padding: 0.5em 1.3em;
+
+    font-size: 1em;
+    line-height: 1.3em;
+    text-align: center;
+    vertical-align: middle;
+
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    // Button Save
+    .modifier(button, save, {
+        color: @text-component;
+        background-color: @button-save-bg;
+        border-color: @button-save-border;
+
+        .button-hover(@button-save-bg, @button-save-border);
+    });
+
+    // Button Delete
+    .modifier(button, delete, {
+        color: @text-component;
+        background-color: @button-delete-bg;
+        border-color: @button-delete-border;
+
+        .button-hover(@button-delete-bg, @button-delete-border);
+    });
+
+    .child(button, icon, {
+        padding-left: 0.5em;
+
+        &:after {
+            width: 0.75em;
+            height: 0.75em;
+        }
+
+        .modifier(button-icon, checked, {
+            &:after {
+                content: "✓";
+            }
+        });
+
+        .modifier(button-icon, delete, {
+            &:after {
+                content: "✗";
+            }
+        });
+    });
+});
+
+
+

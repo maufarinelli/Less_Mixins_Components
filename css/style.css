@@ -1,0 +1,232 @@
+html {
+  font-family: Arial, Geneva, sans-serif;
+  font-size: 10px;
+}
+.container {
+  font-size: 1.4rem;
+  width: 1200px;
+  margin: 10px auto;
+}
+.section {
+  margin-bottom: 30px;
+}
+.block {
+  margin-bottom: 0.75em;
+}
+/* Mixins
+------------------------------------------------ */
+/* Buttons' mixins
+------------------------------------------------ */
+/* Navpill' mixins
+------------------------------------------------ */
+.iconleft {
+  display: inline-block;
+  padding-right: 0.3em;
+  font-style: normal;
+}
+.iconleft:before {
+  width: 0.75em;
+  height: 0.75em;
+}
+.iconleft.icon--checked:before {
+  content: "✓";
+}
+.iconleft.icon--delete:before {
+  content: "✗";
+}
+.iconleft.icon--diamond:before {
+  content: "♦";
+}
+.iconleft.icon--whitestar:before {
+  content: "☆";
+}
+.iconleft.icon--rage:before {
+  content: "✪";
+}
+.iconleft.icon--redhot:before {
+  content: "❂";
+}
+.iconleft.icon--airplaine:before {
+  content: "✈";
+}
+.iconright {
+  display: inline-block;
+  padding-left: 0.3em;
+  font-style: normal;
+}
+.iconright:after {
+  width: 0.75em;
+  height: 0.75em;
+}
+.iconright.icon--checked:after {
+  content: "✓";
+}
+.iconright.icon--delete:after {
+  content: "✗";
+}
+.iconright.icon--diamond:after {
+  content: "♦";
+}
+.iconright.icon--whitestar:after {
+  content: "☆";
+}
+.iconright.icon--rage:after {
+  content: "✪";
+}
+.iconright.icon--redhot:after {
+  content: "❂";
+}
+.iconright.icon--airplaine:after {
+  content: "✈";
+}
+/* Button Component
+----------------------------------------- */
+.button {
+  padding: 0.5em 1.3em;
+  font-size: 1em;
+  line-height: 1.3em;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.button.button--save {
+  color: #ffffff;
+  background-color: #5cb85c;
+  border-color: #449d44;
+}
+.button.button--save:hover {
+  background-color: #449d44;
+  border-color: #357935;
+}
+.button.button--delete {
+  color: #ffffff;
+  background-color: #d9534f;
+  border-color: #c9302c;
+}
+.button.button--delete:hover {
+  background-color: #c9302c;
+  border-color: #a02622;
+}
+.button .button-icon {
+  padding-left: 0.5em;
+}
+.button .button-icon:after {
+  width: 0.75em;
+  height: 0.75em;
+}
+.button .button-icon.button-icon--checked:after {
+  content: "✓";
+}
+.button .button-icon.button-icon--delete:after {
+  content: "✗";
+}
+.navpills {
+  width: 100%;
+  padding-left: 0;
+  list-style: none;
+}
+.navpills.navpills--rounded > * * {
+  border-radius: 5px;
+}
+.navpills .navpills-item {
+  display: inline-block;
+  margin: 0 0.10em;
+}
+.navpills .navpills-item:first-child {
+  margin-left: 0;
+}
+.navpills .navpills-item:last-child {
+  margin-right: 0;
+}
+.navpills .navpills-item .navpills-item-link {
+  display: inline-block;
+  padding: 0.75em 1.3em;
+  background-color: #cccccc;
+  color: #ffffff;
+  text-decoration: none;
+}
+.navpills .navpills-item .navpills-item-link.is-active {
+  background-color: #a6a6a6;
+}
+.navpills .navpills-item .navpills-item-link:hover {
+  background-color: #b3b3b3;
+}
+.box {
+  margin-bottom: 1em;
+  padding: 1em;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+}
+.box .box-title {
+  font-size: 1.5em;
+}
+.box .box-readmore {
+  display: block;
+  color: #1c1c1c;
+  text-align: right;
+}
+.box .box-readmore:after {
+  content: '➤';
+}
+.montroyal_wrapper {
+  height: 150px;
+  padding-top: 25px;
+  overflow: hidden;
+}
+.montroyal {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+}
+.montroyal.montroyal--summer {
+  background-color: #357935;
+}
+.montroyal.montroyal--winter {
+  background-color: #f0f0f0;
+  box-shadow: 3px 3px 3px inset #d7d7d7;
+}
+.montroyal .icon-cross {
+  position: relative;
+}
+.montroyal .icon-cross:before {
+  position: absolute;
+  top: -23.52941176px;
+  left: 200px;
+  content: '✞';
+  width: 20px;
+  height: 20px;
+  font-size: 2em;
+  color: #626262;
+}
+/* Event Types */
+.event {
+  display: inline-block;
+  padding: 1rem;
+  border: 1px solid transparent;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.event.event--a {
+  background-color: #428bca;
+  color: #fff;
+  border-color: #3071a9;
+}
+.event.event--b {
+  background-color: #d9d5d9;
+  color: #000000;
+  border-color: #c1bac1;
+}
+.event.event--redhot {
+  background-color: #ff0000;
+  color: #000000;
+  border-color: #cc0000;
+}
+.event.event--airplaine {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffff00;
+  box-shadow: 0 0 2px #000;
+}
+/*# sourceMappingURL=../less/../css/style.css.map */

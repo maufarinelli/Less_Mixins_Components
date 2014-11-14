@@ -13,7 +13,7 @@ Using the following syntax:
 * a class including the **component class child**, **--** and a **type name** to define a component child type
 
 For example:
-~~<button class="button button--delete">Delete<i class="button-icon button-icon--delete"></i></button>~~
+`<button class="button button--delete">Delete<i class="button-icon button-icon--delete"></i></button>`
 
 For that we have 4 simple mixins to do this job
 

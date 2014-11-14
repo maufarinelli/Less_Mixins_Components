@@ -3,8 +3,8 @@ LESS mixin's components
 
 What I mean about LESS components? I mean some reusable component you created, following the [SMACSS](https://smacss.com/) concept 
 
-|~~.component~~ and its specific styles as ~~.component--types~~ (in the same level)
-|* ~~.component-child~~ and its specific styles as ~~.component-child--types~~ (in the same level)
+~~.component~~ and its specific styles as ~~.component--types~~ (in the same level)
+* ~~.component-child~~ and its specific styles as ~~.component-child--types~~ (in the same level)
 
 Using the following syntax:
 * simple class for a **component**
@@ -17,6 +17,7 @@ For example:
 
 For that we have 4 simple mixins to do this job
 
+```
 .component(@name, @rules) {
     .@{name} {
         @rules();
@@ -40,5 +41,6 @@ For that we have 4 simple mixins to do this job
         @rules();
     }
 }
+```
 
 Enjoy it!

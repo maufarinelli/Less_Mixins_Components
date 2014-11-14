@@ -15,46 +15,45 @@
     border-radius: 4px;
 
     cursor: pointer;
-
-    // Button Save
-    .modifier(button, save, {
-        color: @text-component;
-        background-color: @button-save-bg;
-        border-color: @button-save-border;
-
-        .button-hover(@button-save-bg, @button-save-border);
-    });
-
-    // Button Delete
-    .modifier(button, delete, {
-        color: @text-component;
-        background-color: @button-delete-bg;
-        border-color: @button-delete-border;
-
-        .button-hover(@button-delete-bg, @button-delete-border);
-    });
-
-    .child(button, icon, {
-        padding-left: 0.5em;
-
-        &:after {
-            width: 0.75em;
-            height: 0.75em;
-        }
-
-        .modifier(button-icon, checked, {
-            &:after {
-                content: "✓";
-            }
-        });
-
-        .modifier(button-icon, delete, {
-            &:after {
-                content: "✗";
-            }
-        });
-    });
 });
 
+// Button Save
+.type(button, save, {
+    color: @text-component;
+    background-color: @button-save-bg;
+    border-color: @button-save-border;
 
+    .button-hover(@button-save-bg, @button-save-border);
+});
+
+// Button Delete
+.type(button, delete, {
+    color: @text-component;
+    background-color: @button-delete-bg;
+    border-color: @button-delete-border;
+
+    .button-hover(@button-delete-bg, @button-delete-border);
+});
+
+// Button Icon Child
+.child(button, icon, {
+    padding-left: 0.5em;
+
+    &:after {
+        width: 0.75em;
+        height: 0.75em;
+    }
+
+    .type(button-icon, checked, {
+        &:after {
+            content: "✓";
+        }
+    });
+
+    .type(button-icon, delete, {
+        &:after {
+            content: "✗";
+        }
+    });
+});
 

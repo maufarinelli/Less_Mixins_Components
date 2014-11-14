@@ -1,42 +1,43 @@
 @import (once) "../_mixins";
 @import (once) "../_variables";
 
-/* Event Types */
+/* Event Types
+----------------------------------------- */
 .component(event, {
     display: inline-block;
     padding: 1rem;
     border: 1px solid transparent;
     border-top-left-radius: @border-radius * 2;
     border-bottom-left-radius: @border-radius * 2;
+});
 
-    .modifier(event, a, {
-        background-color: @event-a-bg;
-        color: #fff;
-        border-color: darken(@event-a-bg, 10%);
-    });
+.type(event, a, {
+    background-color: @event-a-bg;
+    color: #fff;
+    border-color: darken(@event-a-bg, 10%);
+});
 
-    .modifier(event, b, {
-        background-color: @event-b-bg;
-        color: darken(@event-b-bg, 100%);
-        border-color: darken(@event-b-bg, 10%);
-    });
+.type(event, b, {
+    background-color: @event-b-bg;
+    color: darken(@event-b-bg, 100%);
+    border-color: darken(@event-b-bg, 10%);
+});
 
-    .modifier(event, redhot, {
-        background-color: @event-redhot-bg;
-        color: darken(@event-redhot-bg, 100%);
-        border-color: darken(@event-redhot-bg, 10%);
-    });
+.type(event, redhot, {
+    background-color: @event-redhot-bg;
+    color: darken(@event-redhot-bg, 100%);
+    border-color: darken(@event-redhot-bg, 10%);
+});
 
-    .modifier(event, airplaine, {
-        background-color: @event-airplaine-bg;
-        color: @event-airplaine-color;
-        border-color: @event-airplaine-border;
-        box-shadow: 0 0 2px #000;
-    });
+.type(event, airplaine, {
+    background-color: @event-airplaine-bg;
+    color: @event-airplaine-color;
+    border-color: @event-airplaine-border;
+    box-shadow: 0 0 2px #000;
+});
 
-    .modifier(event, maya, {
-        background-color: @event-maya-bg;
-        color: @event-maya-color;
-        border-color: @event-maya-color;
-    });
+.type(event, maya, {
+    background-color: @event-maya-bg;
+    color: @event-maya-color;
+    border-color: @event-maya-color;
 });

@@ -1,23 +1,25 @@
 @import (once) "../_mixins";
 @import (once) "../_variables";
 
+/* Box Component
+----------------------------------------- */
 .component(box, {
     margin-bottom: 1em;
     padding: 1em;
     border: 1px solid @box-border-color;
     box-sizing: border-box;
+});
 
-    .child(box, title, {
-        font-size: 1.5em;
-    });
+.child(box, title, {
+    font-size: 1.5em;
+});
 
-    .child(box, readmore, {
-        display: block;
-        color: @text;
-        text-align: right;
+.child(box, readmore, {
+    display: block;
+    color: @text;
+    text-align: right;
 
-        &:after {
-            content: '➤';
-        }
-    });
+    &:after {
+        content: '➤';
+    }
 });

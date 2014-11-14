@@ -1,5 +1,4 @@
-/* Mixins
------------------------------------------------- */
+// Mixins for Components
 .component(@name, @rules) {
     .@{name} {
         @rules();
@@ -12,7 +11,7 @@
     }
 }
 
-.modifier(@component, @name, @rules) {
+.type(@component, @name, @rules) {
     &.@{component}--@{name} {
         @rules();
     }
@@ -26,8 +25,7 @@
 
 
 
-/* Buttons' mixins
------------------------------------------------- */
+// Buttons' mixins
 .button-hover(@bg-color, @border-color) {
     &:hover {
         background-color: darken(@bg-color, 10%);
@@ -37,8 +35,7 @@
 
 
 
-/* Navpill' mixins
------------------------------------------------- */
+// Navpill' mixins
 .navpill-hover(@bg-color) {
     &:hover {
         background-color: darken(@bg-color, 10%);
